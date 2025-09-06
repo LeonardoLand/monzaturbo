@@ -1,0 +1,254 @@
+/* --- Cores e Fontes - TEMA "MONZATURBO" V2 --- */
+:root {
+    --cor-fundo: #f4f4f9;      /* Fundo principal claro */
+    --cor-principal: #1d3557;  /* Azul escuro */
+    --cor-secundaria: #ffffff; /* Branco para seções claras */
+    --cor-texto-claro: #f1faee; /* Texto sobre fundos escuros */
+    --cor-texto-escuro: #333;   /* Texto sobre fundos claros */
+    --fonte-titulo: 'Dancing Script', cursive;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+/* --- EFEITO DE ROLAGEM SUAVE --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+}
+
+/* --- Cabeçalho e Menu (Design Melhorado) --- */
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #a8dadc;
+    border-bottom-color: #a8dadc;
+}
+
+/* --- Seção de Introdução (AGORA SEM FOTO) --- */
+.intro-section {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro-text h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 4.5em;
+    margin: 0 0 10px 0;
+}
+
+/* --- Seções de Conteúdo Padrão --- */
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5em;
+    margin-top: 0;
+    color: var(--cor-principal);
+}
+
+.content-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+/* Cores alternadas para as seções */
+.light {
+    background-color: var(--cor-secundaria);
+}
+.dark {
+    background-color: var(--cor-fundo);
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #343a40;
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Seção de Vídeo --- */
+.video-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.video-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.video-info h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-top: 0;
+}
+
+.video-embed {
+    flex: 1.5;
+    min-width: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Seção de Atividade Flickr --- */
+.flickr-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.flickr-post img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.haiku-text {
+    text-align: center;
+    max-width: 500px;
+}
+
+.haiku-text h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5em;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.haiku-text p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 5px 0;
+    color: var(--cor-texto-escuro);
+}
+
+.flickr-credit {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--cor-texto-escuro);
+}
+
+/* Responsividade para a seção Flickr */
+@media (min-width: 768px) {
+    .flickr-post {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .haiku-text {
+        text-align: left;
+    }
+}
+
+/* --- Seção de Atividade RPG --- */
+.rpg-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.rpg-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.rpg-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.rpg-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.rpg-text h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-top: 0;
+}
+
+.rpg-text .call-to-action {
+    font-weight: bold;
+    color: var(--cor-principal);
+    margin-top: 20px;
+}
